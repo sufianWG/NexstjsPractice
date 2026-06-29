@@ -1,4 +1,4 @@
-"use client"
+
 import { createPost } from '@/actions/postAction';
 import { getPost } from '@/database/postdb';
 import { Button, Description, FieldError, Form, Input, Label, TextField } from '@heroui/react';

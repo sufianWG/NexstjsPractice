@@ -16,6 +16,8 @@ const posts = [
   },
 ];
 
+console.log(posts);
+
 export const addPost = (newPost) => {
     posts.push(newPost)
     console.log(newPost);

@@ -11,6 +11,7 @@ export const createPost = async (formData) => {
         id: Date.now(),
         title,
         description
+        
     })
     revalidatePath("/server-action");
 }
