@@ -1,0 +1,27 @@
+import React from 'react';
+
+const ModelPage = async() => {
+    // await new Promise((resolve) => setTimeout(resolve, 5000))
+    const response = await fetch("http://localhost:8000/models",{
+        // cache: "no-store"
+        next: {revalidate: 10}
+    });
+    const models = await response.json();
+    // console.log(models);
+    return (
+        <div>
+            <h1>Models:</h1>
+            <div className='grid grid-cols-3 gap-3'>
+                 {
+                    models.map(model => <div className='p-8 rounded-xl shadow space-y-3' key={model.id}>
+                        <h1 className='text-xl font-bold'>{model.title}</h1>
+                        <p>{model.description}</p>
+                        <p className='font-bold'>Price : {model.price}</p>
+                    </div> )
+                 }   
+            </div>
+        </div>
+    );
+};
+
+export default ModelPage;
