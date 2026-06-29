@@ -77,7 +77,7 @@
       "title": "Qwen",
       "description": "Alibaba's high-performing Chinese AI series.\nOutstanding in coding, math, and multilingual understanding.",
       "price": 0,
-      "image": "https://img.alicdn.com/imgextra/i3/O1CN01zaxxvj1p4f0VrY17j_!!6000000005307-54-tps-180-180.apng",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Qwen_logo.svg/250px-Qwen_logo.svg.png",
       "status": "mostwanted"
     },
     {
@@ -85,7 +85,7 @@
       "title": "Copilot",
       "description": "Microsoft's AI assistant powered by GPT models.\nExcellent integration with Office 365 and Windows.",
       "price": 20,
-      "image": "https://learningtech.uncg.edu/wp-content/uploads/2025/10/app-page-logo_copilot.png",
+      "image": "https://images.seeklogo.com/logo-png/50/1/microsoft-365-copilot-logo-png_seeklogo-501781.png",
       "status": "popular"
     }
   ]

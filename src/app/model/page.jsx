@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 const ModelPage = async() => {
@@ -14,6 +15,9 @@ const ModelPage = async() => {
             <div className='grid grid-cols-3 gap-3'>
                  {
                     models.map(model => <div className='p-8 rounded-xl shadow space-y-3' key={model.id}>
+                        <div className='mx-w-70'>
+                        <Image src={model.image} alt={model.title} width="300" height="300"></Image>
+                        </div>
                         <h1 className='text-xl font-bold'>{model.title}</h1>
                         <p>{model.description}</p>
                         <p className='font-bold'>Price : {model.price}</p>
