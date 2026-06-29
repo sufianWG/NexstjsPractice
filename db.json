@@ -85,8 +85,20 @@
       "title": "Copilot",
       "description": "Microsoft's AI assistant powered by GPT models.\nExcellent integration with Office 365 and Windows.",
       "price": 20,
-      "image": "https://images.seeklogo.com/logo-png/50/1/microsoft-365-copilot-logo-png_seeklogo-501781.png",
+      "image": "/copilot.png",
       "status": "popular"
+    }
+  ],
+  "post": [
+    {
+      "id": 1,
+      "title": "First Post",
+      "description": "This is my first practice post."
+    },
+    {
+      "id": 2,
+      "title": "Second Post",
+      "description": "Server Actions are interesting."
     }
   ]
 }

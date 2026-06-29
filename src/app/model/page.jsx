@@ -15,8 +15,8 @@ const ModelPage = async() => {
             <div className='grid grid-cols-3 gap-3'>
                  {
                     models.map(model => <div className='p-8 rounded-xl shadow space-y-3' key={model.id}>
-                        <div className='mx-w-70'>
-                        <Image src={model.image} alt={model.title} width="300" height="300"></Image>
+                        <div className='relative h-56 w-full'>
+                        <Image src={model.image} alt={model.title} fill sizes="(max-width: 768px) 100vw, 33vw" loading='eager' className='object-contain'></Image>
                         </div>
                         <h1 className='text-xl font-bold'>{model.title}</h1>
                         <p>{model.description}</p>
