@@ -11,9 +11,13 @@ const SignUpPage = () => {
     const handleSignUP = async (e) => {
         e.preventDefault();
 
-        const name = e.target.name.value;
-        const email = e.target.email.value;
-        const password = e.target.password.value;
+        // const name = e.target.name.value;
+        // const email = e.target.email.value;
+        // const password = e.target.password.value;
+        const formData = new FormData(e.currentTarget);
+        const formValues = Object.fromEntries(formData.entries());
+
+        const {name, email, password} = formValues;
 
         const { data, error } = await authClient.signUp.email({
             name,

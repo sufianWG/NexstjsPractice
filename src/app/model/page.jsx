@@ -1,4 +1,7 @@
+import { auth } from '@/lib/auth';
+import { headers } from 'next/headers';
 import Image from 'next/image';
+import { redirect } from 'next/navigation';
 import React from 'react';
 
 const ModelPage = async() => {
@@ -8,6 +11,18 @@ const ModelPage = async() => {
         next: {revalidate: 10}
     });
     const models = await response.json();
+
+    const session = await auth.api.getSession({
+        headers: await headers()
+    })
+    
+    // console.log(session);
+    const user = session?.user
+    if(!user){
+        redirect("/signin");
+        return <p>Please sign in to access the models</p>
+    }
+
     // console.log(models);
     return (
         <div>
