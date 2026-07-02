@@ -6,7 +6,7 @@ import React from 'react';
 
 const ModelPage = async() => {
     // await new Promise((resolve) => setTimeout(resolve, 5000))
-    const response = await fetch("http://localhost:8000/models",{
+    const response = await fetch(`${process.env.JSON_API_URL}/models`,{
         // cache: "no-store"
         next: {revalidate: 10}
     });
